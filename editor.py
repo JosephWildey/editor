@@ -34,7 +34,7 @@ def get_word_count():
 	userText = []
 
 	if len(text_box.get("1.0","end")) > 1:
-		userText = re.findall(r"[a-zA-Z]+", text_box.get("1.0","end"))
+		userText = re.findall(r"[a-zA-Z-]+", text_box.get("1.0","end"))
 
 	output = "Word count: {}".format(len(userText))
 
