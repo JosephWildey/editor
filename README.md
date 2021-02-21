@@ -5,7 +5,7 @@ This is a simple editor I wrote in Python with Tkinter. It's pretty barebones in
 - Word count
 - Word frequency
 
-It uses regex to pull words out of the content. It seems to sometimes overcount based on blackboard's wordcount. I should probably include a hyphen in the regex to make sure it counts hyphenated words as one, not two. 
+It uses regex to pull words out of the content. It might still overcount, I have not tested it thoroughly. However, it will now count hyphenated words as one word.
 
 # Future features
 
