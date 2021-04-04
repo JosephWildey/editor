@@ -9,6 +9,7 @@ It uses regex to pull words out of the content. It might still overcount, I have
 
 # Future features
 
-I still need to implement save/open functionality. I've been slacking because of my classes and school in general.
+- Save/Open functionality
+- Scrollable word frequency window instead of a simple popup
 
-I want to clean up the window that shows word frequency by making it scrollable. That will probably come in the following weeks as I clean up my code and stuff.
+There was more but I forgot. School and classes have been stressful. Sorry, slacking. Trying to get back into this.
