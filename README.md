@@ -5,18 +5,4 @@ This is a simple editor I wrote in Python with Tkinter. It's pretty barebones in
 - Word count
 - Word frequency
 
-It uses regex to pull words out of the content. It might still overcount, I have not tested it thoroughly. However, it will now count hyphenated words as one word.
-
-# Future features
-
-- Save/Open functionality
-- Scrollable word frequency window instead of a simple popup
-- Google Drive synchronization capabilities. 
-
-# Possible updates
-
-- Send emails (maybe? Will consider w/ GMail despite difficult API)
-- Implementation w/ calculator (because why not?)
-- Might even consider something like the Pandas lib if possible to clean up some of the analysis bits, and to help beautify output.
-
-I'm sort of slacking because classes/school. Trying to get back into this. Still have to write more comments in my code and stuff too.
+It uses regex to pull words out of the content. It might still overcount, I have not tested it thoroughly. However, it will now count hyphenated words as one word. I have plans to expand this project, but school has a way of getting in the way and being super stressful.
