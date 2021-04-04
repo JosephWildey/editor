@@ -20,6 +20,27 @@ label = tk.Label(text="Stats")
 #defining a label for the word count of the document
 wordCountLabel = tk.Label()
 
+#open an askdialog box to explore and open files
+def browseFiles():
+	filename = filedialog.askopenfilename(initialdir = "/home", title = "Select a file",
+						filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+
+
+	f = open(filename, "r")
+	Lines = f.readlines()
+	text_box.delete(1.0, tk.END)
+	text_box.insert(1.0,Lines)
+
+#open an askdialog box to save files
+def saveFiles():
+	savedFile = filedialog.asksaveasfile(mode='w', defaultextension='.txt')
+	if savedFile is None:
+		return
+
+	text2save = str(text_box.get(1.0,tk.END))
+	savedFile.write(text2save)
+	savedFile.close()
+
 #displays the stats label below the textbox
 label.pack()
 
@@ -32,8 +53,8 @@ menubar = tk.Menu(window)
 #defines a menubar object and adds options for user interaction
 filemenu = tk.Menu(menubar)
 filemenu.add_command(label="New", command=text_box.delete("1.0","end"))
-filemenu.add_command(label="Open")
-filemenu.add_command(label="Save")
+filemenu.add_command(label="Open", command=browseFiles)
+filemenu.add_command(label="Save", command=saveFiles)
 filemenu.add_separator()
 filemenu.add_command(label="Quit",command=window.quit)
 
