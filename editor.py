@@ -59,62 +59,90 @@ def get_word_count():
 	#display the output in the word count label
 	wordCountLabel['text'] = output
 
+#function that launches the popup with the word frequency stuff
+#takes in text as a message
 def popupmsg(msg):
+	#define popup object and label
 	popup = tk.Tk()
 	popup.wm_title("Word Frequency")
 	label = tk.Label(popup, text=msg)
 	label.pack()
 
+	#add popup to the main loop, so it'll launch when triggered
 	popup.mainloop()
 
+#function that handles all the calculations and stuff
 def text_analysis():
 
+	#array to stick the text into for easy handling later on
 	userText = []
 
+	#again, make sure there is something in the text box
 	if len(text_box.get("1.0", "end")) > 1:
-		userText = re.findall(r"[a-zA-Z]+", text_box.get("1.0", "end").upper())
+		#using regex to get all the words again, including hyphenated ones
+		userText = re.findall(r"[a-zA-Z-]+", text_box.get("1.0", "end").upper())
 
+	#defining a variable to a counter object for the usertext array
 	uniqueWords = Counter(userText)
 
+	#three more arrays to handle and organize output into a readable fashion
 	outputWord = []
 	outputCount = []
 	outputFrequency = []
 
+	#get the entire length of the text in the textbox
 	length = len(userText)
 
+	#loop through the uniquewords array and examine each word
 	for word in uniqueWords:
+		
+		#if the word is unique add it to the output word array, add it to the output count, and store the words frequency
 		if word not in outputWord:
 			outputWord.append(word)
 			outputCount.append(uniqueWords.get(word))
 			outputFrequency.append(uniqueWords.get(word)/length)
 
+	#defines the endpoint of the unique words array for prettier code later on
 	endpoint = len(uniqueWords)
 
+	#defines output for prettier code later on
 	output = ""
 
+	#loop through all three arrays outputting stats for each individual unique word
 	for i in range(endpoint):
+		
+		#print to screen
 		output += "Word: {}\t Count: {}\t Frequency: {}\t \n".format(outputWord[i],outputCount[i],outputFrequency[i])
 
+	#displays all the info in the popup
 	popupmsg(output)
 
+#creates another category of buttons on the menubar for analytical tools
 analysisMenu = tk.Menu(menubar)
 analysisMenu.add_command(label="Get word count", command = get_word_count)
 analysisMenu.add_command(label="Get word frequency", command = text_analysis)
 
+#organizes them in a cascading manner
 menubar.add_cascade(label="Analyze", menu=analysisMenu)
 
+#displays a popup that shares helpful information
 def popup_help():
 	showinfo("Help", "Click on analysis to get word count or word frequency.")
 
+#gives my name
 def popup_about():
 	showinfo("About", "Created by Joe Wildey.")
 
+#defines a help category on the menubar
 helpMenu = tk.Menu(menubar)
 helpMenu.add_command(label="Help", command = popup_help)
 helpMenu.add_command(label="About", command = popup_about)
 
+#organizes all the help stuff in a cascading manner
 menubar.add_cascade(label="Help", menu=helpMenu)
 
+#add the menu to the window
 window.config(menu=menubar)
 
+#display the window
 window.mainloop()
