@@ -11,5 +11,6 @@ It uses regex to pull words out of the content. It might still overcount, I have
 
 - Save/Open functionality
 - Scrollable word frequency window instead of a simple popup
+- Google Drive synchronization capabilities. 
 
-There was more but I forgot. School and classes have been stressful. Sorry, slacking. Trying to get back into this.
+I'm sort of slacking because classes/school. Trying to get back into this. Still have to write more comments in my code and stuff too.
