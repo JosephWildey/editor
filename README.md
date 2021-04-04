@@ -13,4 +13,10 @@ It uses regex to pull words out of the content. It might still overcount, I have
 - Scrollable word frequency window instead of a simple popup
 - Google Drive synchronization capabilities. 
 
+# Possible updates
+
+- Send emails (maybe? Will consider w/ GMail despite difficult API)
+- Implementation w/ calculator (because why not?)
+- Might even consider something like the Pandas lib if possible to clean up some of the analysis bits.
+
 I'm sort of slacking because classes/school. Trying to get back into this. Still have to write more comments in my code and stuff too.
