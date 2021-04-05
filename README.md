@@ -17,3 +17,4 @@ I've got a kanban board set up to keep myself on track, but I'll share some of m
 - Improve the architecture
 - Implement typical office tools into the word editor directly (e.g. launch independent calculator from menubar w/ option to insert equations or results into textbox)
 - cloud synchronization (made for school projects after all)
+- improve analysis output
