@@ -9,3 +9,11 @@ It uses regex to pull words out of the content. It might still overcount, I have
 
 
 ![editor2](https://user-images.githubusercontent.com/19524084/113521255-4c0c2800-9566-11eb-9f1e-1fab421be472.png)
+
+# Future plans
+I've got a kanban board set up to keep myself on track, but I'll share some of my ideas. 
+
+- Improve the GUI
+- Improve the architecture
+- Implement typical office tools into the word editor directly (e.g. launch independent calculator from menubar w/ option to insert equations or results into textbox)
+- cloud synchronization (made for school projects after all)
