@@ -28,6 +28,7 @@ def browseFiles():
 
 	f = open(filename, "r")
 	Lines = f.readlines()
+	filename.close()
 	text_box.delete(1.0, tk.END)
 	text_box.insert(1.0,Lines)
 
