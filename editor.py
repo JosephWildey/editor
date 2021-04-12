@@ -20,6 +20,12 @@ label = tk.Label(text="Stats")
 #defining a label for the word count of the document
 wordCountLabel = tk.Label()
 
+#displays the stats label below the textbox
+label.pack()
+
+#displays the wordcount label below the stats label and window
+wordCountLabel.pack()
+
 #open an askdialog box to explore and open files
 def browseFiles():
 	filename = filedialog.askopenfilename(initialdir = "/home", title = "Select a file",
@@ -41,12 +47,6 @@ def saveFiles():
 	text2save = str(text_box.get(1.0,tk.END))
 	savedFile.write(text2save)
 	savedFile.close()
-
-#displays the stats label below the textbox
-label.pack()
-
-#displays the wordcount label below the stats label and window
-wordCountLabel.pack()
 
 #defines a menubar object
 menubar = tk.Menu(window)
