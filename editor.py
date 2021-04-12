@@ -73,7 +73,7 @@ def get_word_count():
 	if len(text_box.get("1.0","end")) > 1:
 		
 		#use regex to get each individual word and stick them into the array, hyphenated words are counted as one word
-		userText = re.findall(r"[a-zA-Z-]+", text_box.get("1.0","end"))
+		userText = re.findall(r"[a-zA-Z-']+", text_box.get("1.0","end"))
 
 	#output the word count into the word count label
 	output = "Word count: {}".format(len(userText))
@@ -102,7 +102,7 @@ def text_analysis():
 	#again, make sure there is something in the text box
 	if len(text_box.get("1.0", "end")) > 1:
 		#using regex to get all the words again, including hyphenated ones
-		userText = re.findall(r"[a-zA-Z-]+", text_box.get("1.0", "end").upper())
+		userText = re.findall(r"[a-zA-Z-']+", text_box.get("1.0", "end").upper())
 
 	#defining a variable to a counter object for the usertext array
 	uniqueWords = Counter(userText)
