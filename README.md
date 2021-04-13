@@ -19,3 +19,6 @@ I've got a kanban board set up to keep myself on track, but I'll share some of m
 - cloud synchronization (made for school projects after all)
 - improve analysis output (make it prettier, easier to read, etc)
 - email functionality (no guarantees on GMail implementation)
+
+# Run down/code review
+You can find a rundown and review of the code written on my website, if you want more information about the project or how I'm approaching things: https://joewildey.com/2021/04/12/python-word-editor-pt1/
